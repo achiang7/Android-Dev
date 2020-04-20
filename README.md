@@ -7,3 +7,7 @@ This is the readme for the Dotify app. The Dotify app currently consists of a pl
 Extra credit attempted:
 1. Toolbar back button
 2. DiffUtil animation when shuffle is clicked
+
+![sc shot](https://github.com/achiang7/Dotify/blob/hw2/misc/hw2-1.png)
+![sc shot](https://github.com/achiang7/Dotify/blob/hw2/misc/hw2-2.png)
+
