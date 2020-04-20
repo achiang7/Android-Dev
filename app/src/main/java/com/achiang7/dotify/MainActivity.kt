@@ -9,9 +9,16 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val SONG_KEY = "SONG_KEY"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         numPlay.text = (1000..9999).random().toString()
 
@@ -27,6 +34,8 @@ class MainActivity : AppCompatActivity() {
             nextBtnClicked(view)
         }
 
+        val song = intent.getParcelableExtra<Song>(SONG_KEY)
+        insertSongInfo(song)
     }
 
     fun playBtnClicked(view: View) {
@@ -56,5 +65,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed();
+        return true;
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
+
+    fun insertSongInfo(song: Song) {
+        songTitle.text = song.title
+        artist.text = song.artist
+        albumImg.setImageResource(song.largeImageID)
+    }
 
 }

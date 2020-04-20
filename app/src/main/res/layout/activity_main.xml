@@ -50,7 +50,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/albumImg"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:contentDescription="cover"
@@ -60,24 +60,24 @@
         app:layout_constraintTop_toBottomOf="@id/relativeLayout1" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/songTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Everglow"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/albumImg" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cold Play"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/songTitle" />
 
     <TextView
         android:id="@+id/numPlay"
@@ -88,7 +88,7 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/artist" />
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -106,8 +106,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/previous"
-
-        tools:text="TextView" />
+            />
 
         <ImageView
             android:id="@+id/play"
