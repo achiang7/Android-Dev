@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_ultimate_main.*
@@ -80,6 +81,7 @@ class NowPlayingFragment: Fragment() {
     }
 
     private fun updateSongView() {
+        activity?.miniPlayerContainer?.visibility = View.GONE
         activity?.title = song?.title
         songTitle.text = song?.title
         artist.text = song?.artist

@@ -13,6 +13,7 @@ import java.util.ArrayList
 class UltimateMainActivity : AppCompatActivity(), OnSongClickListener {
 
     private var currSong: Song? = null
+    private var miniPlayerHidden: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,6 +55,7 @@ class UltimateMainActivity : AppCompatActivity(), OnSongClickListener {
         miniPlayer.setOnClickListener {
             navigateToSong()
         }
+
     }
 
     private fun getSongListFragment() = supportFragmentManager.findFragmentByTag(SongListFragment.TAG) as? SongListFragment
