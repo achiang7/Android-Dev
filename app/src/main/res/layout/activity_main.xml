@@ -4,50 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".MainActivity">
-
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/editBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:visibility="gone"
-            android:hint="Enter username..."
-            android:inputType="text">
-
-        </EditText>
-
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerInParent="true"
-            android:text="kawFactor" />
-
-        <Button
-            android:id="@+id/cngBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginRight="0dp"
-            android:onClick="changeUser"
-            android:text="Change User" />
-
-    </RelativeLayout>
-
+    android:padding="16dp">
 
     <ImageView
         android:id="@+id/albumImg"
@@ -57,7 +14,7 @@
         android:src="@drawable/bgimg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/relativeLayout1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/songTitle"
